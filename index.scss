@@ -1,3 +1,256 @@
-header{
-    color: black
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+$arkred: #de0303;
+$text-color: white;
+$highlight-color: linear-gradient(to right, $arkred, orange);
+$transition-duration: 1s;
+$delay-duration: 3s;
+$interface-img: 'astronaut.jpg';
+
+@mixin sunheadtext{
+  
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 3;
+    text-align: center; // Center text horizontally
+    margin: 0vw 15vw 5vw 15vw;
+    .text-span{
+      color: $arkred;
+   }
+}
+* { 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+header {
+
+  position: fixed;
+  padding: 40px 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(8px); // Safari 9+, Chrome, Edge
+  backdrop-filter: blur(8px); // Standard syntax
+
+  // Fallback for browsers that do not support backdrop-filter
+  background-color: rgba(0, 0, 0, 0.5); // Adjust opacity as needed
+  img{
+    width: 250px;
+  height: auto;
+  }
+  #brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $arkred;
+    }
+  }
+}
+.interface {
+  
+  z-index: -1;
+  position: relative; // Ensure proper layering with z-index
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0)), url('#{$interface-img}');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  
+
+  
+  &::after {
+    content: ""; // Create pseudo-element
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; // Inherit background from parent
+    filter: brightness(0.6); // Apply filter only to the image
+  }
+  #scroll-down {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+  }
+  
+  #scroll-down.hidden {
+    opacity: 0;
+  }
+  
+  .headtext {
+    display: flex;
+    font-size: 10vh; // Responsive font size based on viewport width
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center; // Center text horizontally
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9vw;
+    
+
+  }
+  @include subheadtext;
+
+  
+
+  
+  .subsubheadtext{
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 5  ;
+    text-align: center; 
+    
+  
+    animation: highlight $transition-duration infinite;
+    animation-delay: $delay-duration;
+  }
+  // Media query for smaller screens (e.g., mobile devices)
+  @media screen and (max-width: 768px) {
+    .headtext {
+      font-size: 19vw; // Adjust font size for smaller screens
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  a {
+    color: white;
+  }
+
+  li {
+    padding: 5px;
+    margin-left: 10px;
+
+    &:hover {
+
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  }
+}
+#singin button {
+  /* Base styles for the button */
+  background-color: $arkred; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  /* Transition effect for hover */
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+
+}
+
+#singin button:hover {
+  /* Styles on hover */
+  background-color: white; /* Darker blue on hover */
+  color: black;
+  border-color: $arkred;
+  border-width: 2px;  
+
+  
+}
+
+
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  &.open {
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-6px, -8px);
+      transform: rotate(45deg) translate(-6px, -8px);
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+
+  
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+
+  }
+
+  #hamburger-icon {
+    display: block;
+    
+  }
+
+  .open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 7vw;
+    z-index: 2  ;
+    background-color: rgba(0, 0, 0, 0.85); // Start with fully transparent background
+    // Add an overlay with a translucent color
+    transition: all 0.3s ease; 
+  }
+  
 }

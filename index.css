@@ -1,1 +1,206 @@
-/*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  padding: 40px 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header img {
+  width: 250px;
+  height: auto;
+}
+header #brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+header #brand a {
+  color: #de0303;
+}
+
+.interface {
+  z-index: -1;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("astronaut.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+.interface::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: brightness(0.6);
+}
+.interface #scroll-down {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+}
+.interface #scroll-down.hidden {
+  opacity: 0;
+}
+.interface .headtext {
+  display: flex;
+  font-size: 10vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 9vw;
+}
+.interface .subheadtext {
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: 0vw 15vw 5vw 15vw;
+}
+.interface .subheadtext .text-span {
+  color: #de0303;
+}
+.interface .subsubheadtext {
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  animation: highlight 1s infinite;
+  animation-delay: 3s;
+}
+@media screen and (max-width: 768px) {
+  .interface .headtext {
+    font-size: 19vw;
+  }
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ul a {
+  color: white;
+}
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+ul li:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#singin button {
+  /* Base styles for the button */
+  background-color: #de0303; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Transition effect for hover */
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+#singin button:hover {
+  /* Styles on hover */
+  background-color: white; /* Darker blue on hover */
+  color: black;
+  border-color: #de0303;
+  border-width: 2px;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+#hamburger-icon.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+#hamburger-icon.open .bar2 {
+  opacity: 0;
+}
+#hamburger-icon.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+  .open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 7vw;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: all 0.3s ease;
+  }
+}/*# sourceMappingURL=index.css.map */

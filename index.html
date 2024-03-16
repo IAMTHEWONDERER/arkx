@@ -1,22 +1,80 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkx Academy</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Navigation bar</title>
+  </head>
+  <body>
     <header>
-        <h1>Arkx Academy</h1>
-    </header>
-    <nav>
+      <div id="brand"><img src="arkx.png" alt="arkx"></div>
+      <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/products">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li id="singin"><button >Sign In</button></li>
         </ul>
-    </nav>
-</body>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/products">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li id="singin"><button >Sign In</button></li>
+
+        </ul>
+      </div>
+    </header>
+    <div class="interface">
+        <h1 class="headtext">
+            Welcome to Arkx!
+        </h1>
+        <h2 class="subheadtext">
+          Ark<span class="text-span"><sup>x</sup></span> is a talent factory, We produce the best of the best when it comes to web developers.<br/>
+        </h2>
+        <h3 class="subsubheadtext">
+          Come with us to discover our team and where you can find us.
+        </h3>
+       
+        <div id="scroll-down">
+          <p>Scroll down</p>
+          <div class="arrow"></div>
+        </div>
+        
+    </div>  
+    
+    <div class="location">
+      <h2 class="subheadtext">
+        Where can you find us
+      </h2>
+    </div>
+    <div class="team">
+      <h2 class="subheadtext">
+        Our team
+      </h2>
+    </div>
+    <div class="program">
+      <h2 class="subheadtext">
+        Our programs
+      </h2>
+    </div>
+    <div class="contact">
+      <h2 class="subheadtext">
+        Contact us
+      </h2>
+    </div>
+    <div class="footer">
+      <h2 class="subheadtext">
+        Footer
+      </h2>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>

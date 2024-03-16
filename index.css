@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -352,7 +353,114 @@ button:hover {
 }
 
 .footer {
-  background-color: var(--background-secondary);
-  padding: 2rem 1rem;
+  display: flex;
+  background-color: rgb(17, 17, 17);
+  padding-top: 7vw;
+  justify-content: space-evenly;
+  align-items: start;
+  height: 32vh;
+  padding: 20px;
+}
+.footer .ft-section {
+  display: flex;
+  flex-direction: column;
+}
+.footer .ft-section hr {
+  border-top: 3px #de0303;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.footer .ft-section h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+.footer .ft-section h6 {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.us .collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  margin-top: 15px;
+  align-self: space-between;
+  margin-left: 5px;
+}
+.us .cardABC {
+  --main-color: #000;
+  --submain-color: #78858F;
+  --bg-color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: relative;
+  width: 240px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--bg-color);
+}
+.us .card__img {
+  height: 192px;
+  width: 100%;
+}
+.us .card__img svg {
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.us .card__avatar {
+  position: absolute;
+  width: 114px;
+  height: 114px;
+  background: var(--bg-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 57px);
+}
+.us .card__avatar svg {
+  width: 100px;
+  height: 100px;
+}
+.us .card__title {
+  margin-top: 60px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-color);
+}
+.us .card__subtitle {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--submain-color);
+}
+.us .card__btn {
+  margin-top: 15px;
+  width: 76px;
+  height: 31px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--main-color);
+  background: var(--bg-color);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.us .card__btn-solid {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+.us .card__btn:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+.us .card__btn-solid:hover {
+  background: var(--bg-color);
+  color: var(--main-color);
 }/*# sourceMappingURL=index.css.map */

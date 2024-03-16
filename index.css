@@ -382,13 +382,29 @@ button:hover {
   margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 767px) {
+  .us .collection {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .us .collection .team {
+    width: 80%;
+    min-width: 200px;
+    max-width: none;
+    margin-right: 10px;
+  }
+}
 .us .collection {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 5px;
-  margin-top: 15px;
   align-self: space-between;
-  margin-left: 5px;
+  margin: 15vw 0vw 15vw 2vw;
 }
 .us .cardABC {
   --main-color: #000;
@@ -416,51 +432,54 @@ button:hover {
   position: absolute;
   width: 114px;
   height: 114px;
-  background: var(--bg-color);
+  background: aliceblue;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   top: calc(50% - 57px);
 }
-.us .card__avatar svg {
-  width: 100px;
-  height: 100px;
+.us .card__avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .us .card__title {
   margin-top: 60px;
   font-weight: 500;
   font-size: 18px;
-  color: var(--main-color);
+  color: black;
 }
 .us .card__subtitle {
   margin-top: 10px;
   font-weight: 400;
   font-size: 15px;
-  color: var(--submain-color);
+  color: grey;
 }
 .us .card__btn {
   margin-top: 15px;
   width: 76px;
   height: 31px;
-  border: 2px solid var(--main-color);
   border-radius: 4px;
   font-weight: 700;
   font-size: 11px;
-  color: var(--main-color);
-  background: var(--bg-color);
+  color: aliceblue;
+  background: #de0303;
   text-transform: uppercase;
   transition: all 0.3s;
+  text-align: center;
 }
 .us .card__btn-solid {
-  background: var(--main-color);
-  color: var(--bg-color);
+  background: aliceblue;
+  color: black;
 }
 .us .card__btn:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
+  background: aliceblue;
+  color: black;
 }
 .us .card__btn-solid:hover {
-  background: var(--bg-color);
-  color: var(--main-color);
+  background: aliceblue;
+  color: black;
 }/*# sourceMappingURL=index.css.map */

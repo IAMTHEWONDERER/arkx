@@ -30,10 +30,20 @@ $interface-img: 'astronaut.jpg';
 }
 @mixin phone-styles {
   @media only screen and (max-width: 600px) {
-    margin-top: 20vh;
+    margin-top: 30vw;
+    margin-bottom: 30vw;
   }
 }
+@mixin card{
+  width: 28vw;
+    height: 36vw;
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    font-size: 30px;
+    font-weight: 900;
 
+}
 * { 
   padding: 0;
   margin: 0;
@@ -143,8 +153,15 @@ header {
   // Media query for smaller screens (e.g., mobile devices)
   @media screen and (max-width: 768px) {
     .headtext {
-      font-size: 19vw; // Adjust font size for smaller screens
+      font-size: 17vw; // Adjust font size for smaller screens
     }
+    .subheadtext{
+      font-size: 8vw;
+    }
+    .subsubheadtext{
+      font-size: 5vw;
+    }
+
   }
 }
 
@@ -170,7 +187,7 @@ ul {
     }
   }
 }
-#singin button {
+button {
   /* Base styles for the button */
   background-color: $arkred; /* Blue background */
   color: white;
@@ -185,7 +202,7 @@ ul {
 
 }
 
-#singin button:hover {
+button:hover {
   /* Styles on hover */
   background-color: white; /* Darker blue on hover */
   color: black;
@@ -267,6 +284,7 @@ ul {
 }
 .program{
   margin-top: 20vw;
+  @include phone-styles;
   .subheadtext{
     @include subheadtext;
   }
@@ -276,18 +294,74 @@ ul {
     text-align: center;
     align-items: center;
     gap: 20vw;
+    margin: 8vw 0vw 13vw 0vw;
   }
   
-  .card {
-    width: 20vw;
-    height: 28vw;
-    border-radius: 30px;
-    background: #212121;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-  
-    /* Center the card within its own half */
+  .javascript {
+    background: rgb(247, 223, 49);
+    @include card;
+    .js{
+      width: 28vw;
+      height: auto;
+    }
     
   }
+  .java{
+    background-color: aliceblue;
+    @include card;
+  }
+  .javascript:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    background: rgb(247, 223, 49);
+    color: black;
+  }
+  .java:hover{
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    color: black;
+    background-color:aliceblue ;
+  }
+
+  
+  .first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+  }
+  
+  .card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+  }
+  
+  .second-content {
+    height: 0%;
+    opacity: 0;   
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+   margin-top: 5vw;
+  }
+  
+  .card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size:20px;
+    transform: rotate(0deg);
+    
+    
+  }
+  
   
    
 }

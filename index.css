@@ -106,7 +106,13 @@ header #brand a {
 }
 @media screen and (max-width: 768px) {
   .interface .headtext {
-    font-size: 19vw;
+    font-size: 17vw;
+  }
+  .interface .subheadtext {
+    font-size: 8vw;
+  }
+  .interface .subsubheadtext {
+    font-size: 5vw;
   }
 }
 
@@ -129,7 +135,7 @@ ul li:hover {
   transition: 0.3s;
 }
 
-#singin button {
+button {
   /* Base styles for the button */
   background-color: #de0303; /* Blue background */
   color: white;
@@ -142,7 +148,7 @@ ul li:hover {
   font-family: "Poppins", sans-serif;
 }
 
-#singin button:hover {
+button:hover {
   /* Styles on hover */
   background-color: white; /* Darker blue on hover */
   color: black;
@@ -205,6 +211,12 @@ ul li:hover {
 .program {
   margin-top: 20vw;
 }
+@media only screen and (max-width: 600px) {
+  .program {
+    margin-top: 30vw;
+    margin-bottom: 30vw;
+  }
+}
 .program .subheadtext {
   font-size: 4vh;
   font-weight: bold;
@@ -223,14 +235,75 @@ ul li:hover {
   text-align: center;
   align-items: center;
   gap: 20vw;
+  margin: 8vw 0vw 13vw 0vw;
 }
-.program .card {
-  width: 20vw;
-  height: 28vw;
-  border-radius: 30px;
-  background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-  /* Center the card within its own half */
+.program .javascript {
+  background: rgb(247, 223, 49);
+  width: 28vw;
+  height: 36vw;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+}
+.program .javascript .js {
+  width: 28vw;
+  height: auto;
+}
+.program .java {
+  background-color: aliceblue;
+  width: 28vw;
+  height: 36vw;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+}
+.program .javascript:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  background: rgb(247, 223, 49);
+  color: black;
+}
+.program .java:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  color: black;
+  background-color: aliceblue;
+}
+.program .first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+.program .card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+.program .second-content {
+  height: 0%;
+  opacity: 0;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  margin-top: 5vw;
+}
+.program .card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 20px;
+  transform: rotate(0deg);
 }
 
 .location {

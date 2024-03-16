@@ -11,11 +11,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header a {
-  text-decoration: none;
-}
-
 header {
+  z-index: 10000000;
   position: fixed;
   padding: 40px 20px;
   height: 50px;
@@ -25,6 +22,9 @@ header {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background-color: rgba(0, 0, 0, 0.5);
+}
+header a {
+  text-decoration: none;
 }
 header img {
   width: 250px;
@@ -103,8 +103,6 @@ header #brand a {
   position: relative;
   z-index: 5;
   text-align: center;
-  animation: highlight 1s infinite;
-  animation-delay: 3s;
 }
 @media screen and (max-width: 768px) {
   .interface .headtext {
@@ -203,4 +201,85 @@ ul li:hover {
     background-color: rgba(0, 0, 0, 0.85);
     transition: all 0.3s ease;
   }
+}
+.program {
+  margin-top: 20vw;
+}
+.program .subheadtext {
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: 0vw 15vw 5vw 15vw;
+}
+.program .subheadtext .text-span {
+  color: #de0303;
+}
+.program .program-cards {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 20vw;
+}
+.program .card {
+  width: 20vw;
+  height: 28vw;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  /* Center the card within its own half */
+}
+
+.location {
+  display: grid;
+  justify-content: space-around;
+  /* Media query for smaller screens (e.g., mobile devices) */
+}
+.location .subheadtext {
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: 0vw 15vw 5vw 15vw;
+}
+.location .subheadtext .text-span {
+  color: #de0303;
+}
+.location .finder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+}
+.location .subsubheadtext {
+  margin-top: 3vw;
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+.location .frame {
+  width: 35vw;
+  height: 35vw;
+  margin-top: 15px;
+  align-self: space-between;
+}
+@media screen and (max-width: 600px) {
+  .location .finder {
+    display: flex;
+    flex-direction: column; /* Change the layout to stack vertically */
+    align-items: center; /* Center the items horizontally */
+  }
+}
+
+.footer {
+  background-color: var(--background-secondary);
+  padding: 2rem 1rem;
+  position: relative;
 }/*# sourceMappingURL=index.css.map */

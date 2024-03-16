@@ -6,7 +6,7 @@ $transition-duration: 1s;
 $delay-duration: 3s;
 $interface-img: 'astronaut.jpg';
 
-@mixin sunheadtext{
+@mixin subheadtext{
   
     font-size: 4vh;
     font-weight: bold;
@@ -19,6 +19,21 @@ $interface-img: 'astronaut.jpg';
       color: $arkred;
    }
 }
+@mixin subsubheadtext{
+  font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 5  ;
+    text-align: center; 
+    
+}
+@mixin phone-styles {
+  @media only screen and (max-width: 600px) {
+    margin-top: 20vh;
+  }
+}
+
 * { 
   padding: 0;
   margin: 0;
@@ -34,7 +49,7 @@ body {
 
 
 header {
-
+  z-index: 10000000;
   position: fixed;
   padding: 40px 20px;
   height: 50px;
@@ -46,6 +61,9 @@ header {
 
   // Fallback for browsers that do not support backdrop-filter
   background-color: rgba(0, 0, 0, 0.5); // Adjust opacity as needed
+  a{
+    text-decoration: none;
+  }
   img{
     width: 250px;
   height: auto;
@@ -112,22 +130,15 @@ header {
     
 
   }
+  .subheadtext{
   @include subheadtext;
+  }
 
   
 
   
   .subsubheadtext{
-    font-size: 3vh;
-    font-weight: bold;
-    color: white;
-    position: relative;
-    z-index: 5  ;
-    text-align: center; 
-    
-  
-    animation: highlight $transition-duration infinite;
-    animation-delay: $delay-duration;
+  @include subsubheadtext;
   }
   // Media query for smaller screens (e.g., mobile devices)
   @media screen and (max-width: 768px) {
@@ -253,4 +264,68 @@ ul {
     transition: all 0.3s ease; 
   }
   
+}
+.program{
+  margin-top: 20vw;
+  .subheadtext{
+    @include subheadtext;
+  }
+  .program-cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20vw;
+  }
+  
+  .card {
+    width: 20vw;
+    height: 28vw;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  
+    /* Center the card within its own half */
+    
+  }
+  
+   
+}
+
+.location{
+  display: grid;
+  justify-content: space-around;
+  .subheadtext{
+    @include subheadtext;
+  }
+  .finder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+  }
+  .subsubheadtext{
+    margin-top: 3vw;
+    @include subsubheadtext;
+  }
+
+  .frame {
+    width: 35vw;
+    height: 35vw;
+    margin-top: 15px;
+    align-self: space-between;
+  }
+
+  /* Media query for smaller screens (e.g., mobile devices) */
+  @media screen and (max-width: 600px) {
+    .finder {
+      display: flex;
+      flex-direction: column; /* Change the layout to stack vertically */
+      align-items: center; /* Center the items horizontally */
+    }
+  }
+}
+.footer{
+  background-color: var(--background-secondary);
+  padding: 2rem 1rem;
+  position: relative;
 }

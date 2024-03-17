@@ -435,46 +435,27 @@ button:hover {
     align-self: space-between;
   }
 
-  /* Media query for smaller screens (e.g., mobile devices) */
-  @media screen and (max-width: 600px) {
+   @media screen and (max-width: 600px) {
     .finder {
       display: flex;
-      flex-direction: column; /* Change the layout to stack vertically */
-      width: 90vw;
-      height: 90vh;
-      align-items: center; /* Center the items horizontally */
+      flex-direction: column; 
+      width: 80vw;
+      align-items: center;
+      margin-bottom: 20vw;
+      .frame{
+        width: 90vw;
+        margin-top: 10vw;
+        height: 90vw
+
+      }
+      .lochead{
+        margin-top: 40vw;
+      }
     }
   }
 }
-.footer{
-  display: flex;
-  background-color: rgb(17, 17, 17);
-  padding-top: 7vw;
-  justify-content: space-evenly;
-  align-items: start;
-  height: 32vh;
-  padding: 20px;
-  .ft-section{
-    display: flex;
-    flex-direction: column;
-    hr{
-      border-top: 3px $arkred;
-      margin-bottom: 5px;
-      text-decoration: none;
-    }
-    h4{
-      font-size: 20px;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 10px;
-    }
-    h6{
-      font-size: 15px;
-      color: white;
-      margin-bottom: 10px;
-    }
-  }
-}
+
+
 .us{
   .cardimg{
     width: 18vw;
@@ -494,10 +475,10 @@ button:hover {
         padding-bottom: 20px;
         -webkit-overflow-scrolling: touch; 
         .team {
-            width: 80%; 
+            width: 90vw; 
             min-width: 200px; 
             max-width: none; 
-            margin-right: 10px; 
+            margin-left: 15vw;
         }
     }
 }
@@ -595,3 +576,46 @@ button:hover {
     color: black;
 }
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(17, 17, 17);
+  padding: 20px;
+  padding-top: 7vw;
+  justify-content: space-evenly;
+  align-items: start;
+
+  .ft-section {
+    display: flex;
+    flex-direction: column;
+
+    hr {
+      border-top: 3px $arkred;
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      font-size: 15px;
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    padding-top: 10px; 
+    padding-bottom: 20px; 
+    justify-content: center; 
+    align-items: center;
+  }
+}
+

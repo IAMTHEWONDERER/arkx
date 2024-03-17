@@ -334,7 +334,6 @@ button:hover {
 .location {
   display: grid;
   justify-content: space-around;
-  /* Media query for smaller screens (e.g., mobile devices) */
 }
 .location .subheadtext {
   font-size: 4vh;
@@ -371,41 +370,19 @@ button:hover {
 @media screen and (max-width: 600px) {
   .location .finder {
     display: flex;
-    flex-direction: column; /* Change the layout to stack vertically */
-    width: 90vw;
-    height: 90vh;
-    align-items: center; /* Center the items horizontally */
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    margin-bottom: 20vw;
   }
-}
-
-.footer {
-  display: flex;
-  background-color: rgb(17, 17, 17);
-  padding-top: 7vw;
-  justify-content: space-evenly;
-  align-items: start;
-  height: 32vh;
-  padding: 20px;
-}
-.footer .ft-section {
-  display: flex;
-  flex-direction: column;
-}
-.footer .ft-section hr {
-  border-top: 3px #de0303;
-  margin-bottom: 5px;
-  text-decoration: none;
-}
-.footer .ft-section h4 {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-}
-.footer .ft-section h6 {
-  font-size: 15px;
-  color: white;
-  margin-bottom: 10px;
+  .location .finder .frame {
+    width: 90vw;
+    margin-top: 10vw;
+    height: 90vw;
+  }
+  .location .finder .lochead {
+    margin-top: 40vw;
+  }
 }
 
 .us .cardimg {
@@ -435,10 +412,10 @@ button:hover {
     -webkit-overflow-scrolling: touch;
   }
   .us .collection .team {
-    width: 80%;
+    width: 90vw;
     min-width: 200px;
     max-width: none;
-    margin-right: 10px;
+    margin-left: 15vw;
   }
 }
 .us .collection {
@@ -521,4 +498,42 @@ button:hover {
 .us .card__btn-solid:hover {
   background: aliceblue;
   color: black;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(17, 17, 17);
+  padding: 20px;
+  padding-top: 7vw;
+  justify-content: space-evenly;
+  align-items: start;
+}
+.footer .ft-section {
+  display: flex;
+  flex-direction: column;
+}
+.footer .ft-section hr {
+  border-top: 3px #de0303;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.footer .ft-section h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+.footer .ft-section h6 {
+  font-size: 15px;
+  color: white;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=index.css.map */

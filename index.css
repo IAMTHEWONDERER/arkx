@@ -238,73 +238,97 @@ button:hover {
   gap: 20vw;
   margin: 8vw 0vw 13vw 0vw;
 }
-.program .javascript {
-  background: rgb(247, 223, 49);
-  width: 28vw;
-  height: 36vw;
-  transition: all 0.4s;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  font-size: 30px;
-  font-weight: 900;
+.program .card {
+  width: 30vw;
+  height: 35vw;
+  background: #15001f;
+  border: 1px solid #c042ff;
+  font-size: 14px;
+  font-family: monospace;
+  overflow: auto;
+  margin-bottom: 20px;
 }
-.program .javascript .js {
-  width: 28vw;
-  height: auto;
+@media screen and (max-width: 768px) {
+  .program .program-cards {
+    flex-direction: column;
+  }
+  .program .card {
+    width: 90vw;
+    margin: 8vw auto;
+    height: 120vw;
+  }
 }
-.program .java {
-  background-color: aliceblue;
-  width: 28vw;
-  height: 36vw;
-  transition: all 0.4s;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  font-size: 30px;
-  font-weight: 900;
-}
-.program .javascript:hover {
-  border-radius: 15px;
-  cursor: pointer;
-  transform: scale(1.2);
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  background: rgb(247, 223, 49);
-  color: black;
-}
-.program .java:hover {
-  border-radius: 15px;
-  cursor: pointer;
-  transform: scale(1.2);
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
-  color: black;
-  background-color: aliceblue;
-}
-.program .first-content {
-  height: 100%;
+.program .titlebar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 21px;
+  font-weight: 450;
+  background-color: #2e0043;
   width: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  border-radius: 15px;
+  text-align: right;
 }
-.program .card:hover .first-content {
-  height: 0px;
-  opacity: 0;
+.program .card button {
+  width: 40px;
+  height: 35px;
+  margin-left: -5px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  transition: 0.2s;
 }
-.program .second-content {
-  height: 0%;
-  opacity: 0;
-  border-radius: 15px;
-  transition: all 0.4s;
-  font-size: 0px;
-  margin-top: 5vw;
+.program button svg path,
+.program button svg rect,
+.program button svg polygon {
+  fill: #ffffff;
 }
-.program .card:hover .second-content {
-  opacity: 1;
-  height: 100%;
-  font-size: 20px;
-  transform: rotate(0deg);
+.program button svg {
+  width: 10px;
+  height: 10px;
+}
+.program .close:hover {
+  background-color: #e81123;
+}
+.program .maximize:hover {
+  background-color: rgba(192, 66, 255, 0.1803921569);
+}
+.program .minimize:hover {
+  background-color: rgba(192, 66, 255, 0.1803921569);
+}
+.program #pre {
+  overflow: auto;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  color: #bafff8;
+}
+.program .curlies {
+  color: #ff0000;
+}
+.program .sc {
+  color: #e600ff;
+}
+.program .rounds {
+  color: #ffffff;
+}
+.program .operator {
+  color: #ffff00;
+}
+.program .s1 {
+  color: #22ff00;
+}
+.program .s2 {
+  color: #4281ff;
+}
+.program .s3 {
+  color: #ff4284;
+}
+.program .s4 {
+  color: #ffae00;
+}
+.program .s5 {
+  color: #ffffff;
+}
+.program .s6 {
+  color: #ffff00;
 }
 
 .location {
@@ -348,6 +372,8 @@ button:hover {
   .location .finder {
     display: flex;
     flex-direction: column; /* Change the layout to stack vertically */
+    width: 90vw;
+    height: 90vh;
     align-items: center; /* Center the items horizontally */
   }
 }
@@ -382,6 +408,22 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.us .cardimg {
+  width: 18vw;
+}
+.us .subheadtext {
+  font-size: 4vh;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: 0vw 15vw 5vw 15vw;
+  margin: 10vw 0vw 10vw 0vw;
+}
+.us .subheadtext .text-span {
+  color: #de0303;
+}
 @media only screen and (max-width: 767px) {
   .us .collection {
     overflow-x: auto;
@@ -404,12 +446,9 @@ button:hover {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 5px;
   align-self: space-between;
-  margin: 15vw 0vw 15vw 2vw;
+  margin: 10vw 0vw 15vw 2vw;
 }
 .us .cardABC {
-  --main-color: #000;
-  --submain-color: #78858F;
-  --bg-color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: relative;
   width: 240px;
@@ -417,8 +456,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 20px;
-  background: var(--bg-color);
+  border-radius: 7px;
+  background: black;
 }
 .us .card__img {
   height: 192px;
@@ -426,13 +465,13 @@ button:hover {
 }
 .us .card__img svg {
   height: 100%;
-  border-radius: 20px 20px 0 0;
+  border-radius: 7px 7px 0 0;
 }
 .us .card__avatar {
   position: absolute;
   width: 114px;
   height: 114px;
-  background: aliceblue;
+  background: black;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -450,13 +489,13 @@ button:hover {
   margin-top: 60px;
   font-weight: 500;
   font-size: 18px;
-  color: black;
+  color: aliceblue;
 }
 .us .card__subtitle {
   margin-top: 10px;
   font-weight: 400;
   font-size: 15px;
-  color: grey;
+  color: antiquewhite;
 }
 .us .card__btn {
   margin-top: 15px;

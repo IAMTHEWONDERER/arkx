@@ -297,73 +297,118 @@ button:hover {
     gap: 20vw;
     margin: 8vw 0vw 13vw 0vw;
   }
-  
-  .javascript {
-    background: rgb(247, 223, 49);
-    @include card;
-    .js{
-      width: 28vw;
-      height: auto;
+  .card {
+    width: 30vw;
+    height: 35vw;
+    background: #15001f;
+    border: 1px solid #c042ff;
+    font-size: 14px;
+    font-family: monospace;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    .program-cards {
+      flex-direction: column; 
     }
-    
+
+    .card {
+      width: 90vw;
+      margin: 8vw auto;
+      height: 120vw;
+    }
   }
-  .java{
-    background-color: aliceblue;
-    @include card;
+  .titlebar {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 21px;
+    font-weight: 450;
+    background-color: #2e0043;
+    width: 100%;
+    text-align: right;
   }
-  .javascript:hover {
-    border-radius: 15px;
-    cursor: pointer;
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-    background: rgb(247, 223, 49);
-    color: black;
+  
+  .card button {
+    width: 40px;
+    height: 35px;
+    margin-left: -5px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    transition: 0.2s;
   }
-  .java:hover{
-    border-radius: 15px;
-    cursor: pointer;
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
-    color: black;
-    background-color:aliceblue ;
+  
+  button svg path, 
+  button svg rect, 
+  button svg polygon {
+    fill: #ffffff;
+  }
+  
+  button svg {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .close:hover {
+    background-color: #e81123;
+  }
+  
+  .maximize:hover {
+    background-color: #c042ff2e;
+  }
+  
+  .minimize:hover {
+    background-color: #c042ff2e;
+  }
+  
+  #pre {
+    overflow: auto;
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    color: #bafff8;
+  }
+  
+  .curlies {
+    color: #ff0000;
+  }
+  
+  .sc {
+    color: #e600ff;
+  }
+  
+  .rounds {
+    color: #ffffff;
+  }
+  
+  .operator {
+    color: #ffff00;
+  }
+  
+  .s1 {
+    color: #22ff00;
+  }
+  
+  .s2 {
+    color: #4281ff;
+  }
+  
+  .s3 {
+    color: #ff4284;
+  }
+  
+  .s4 {
+    color: #ffae00;
+  }
+  
+  .s5 {
+    color: #ffffff;
+  }
+  
+  .s6 {
+    color: #ffff00;
   }
 
-  
-  .first-content {
-    height: 100%;
-    width: 100%;
-    transition: all 0.4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    border-radius: 15px;
-  }
-  
-  .card:hover .first-content {
-    height: 0px;
-    opacity: 0;
-  }
-  
-  .second-content {
-    height: 0%;
-    opacity: 0;   
-    border-radius: 15px;
-    transition: all 0.4s;
-    font-size: 0px;
-   margin-top: 5vw;
-  }
-  
-  .card:hover .second-content {
-    opacity: 1;
-    height: 100%;
-    font-size:20px;
-    transform: rotate(0deg);
-    
-    
-  }
-  
-  
+
    
 }
 
@@ -395,6 +440,8 @@ button:hover {
     .finder {
       display: flex;
       flex-direction: column; /* Change the layout to stack vertically */
+      width: 90vw;
+      height: 90vh;
       align-items: center; /* Center the items horizontally */
     }
   }
@@ -429,6 +476,14 @@ button:hover {
   }
 }
 .us{
+  .cardimg{
+    width: 18vw;
+  }
+  .subheadtext{
+    @include subheadtext;
+    margin: 10vw 0vw 10vw 0vw;
+
+  }
   @media only screen and (max-width: 767px) {
     .collection {
         overflow-x: auto;
@@ -451,14 +506,12 @@ button:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 5px;
     align-self: space-between;
-    margin:15vw 0vw 15vw 2vw;
+    margin:10vw 0vw 15vw 2vw;
 
     
   }
   .cardABC {
-    --main-color: #000;
-    --submain-color: #78858F;
-    --bg-color: #fff;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
     width: 240px;
@@ -466,8 +519,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
-    background: var(--bg-color);
+    border-radius: 7px;
+    background: black;
 }
 
 .card__img {
@@ -477,14 +530,14 @@ button:hover {
 
 .card__img svg {
     height: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 7px 7px 0 0;
 }
 
 .card__avatar {
     position: absolute;
     width: 114px;
     height: 114px;
-    background:aliceblue;
+    background: black;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -503,14 +556,14 @@ button:hover {
     margin-top: 60px;
     font-weight: 500;
     font-size: 18px;
-    color: black;
+    color: aliceblue;
 }
 
 .card__subtitle {
     margin-top: 10px;
     font-weight: 400;
     font-size: 15px;
-    color: grey;
+    color: antiquewhite;
 }
 
 .card__btn {

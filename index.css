@@ -93,6 +93,7 @@ header #brand a {
   z-index: 3;
   text-align: center;
   margin: 0vw 15vw 5vw 15vw;
+  font-family: "Poppins", sans-serif;
 }
 .interface .subheadtext .text-span {
   color: #de0303;
@@ -104,6 +105,7 @@ header #brand a {
   position: relative;
   z-index: 5;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .interface .headtext {
@@ -226,6 +228,7 @@ button:hover {
   z-index: 3;
   text-align: center;
   margin: 0vw 15vw 5vw 15vw;
+  font-family: "Poppins", sans-serif;
 }
 .program .subheadtext .text-span {
   color: #de0303;
@@ -343,6 +346,7 @@ button:hover {
   z-index: 3;
   text-align: center;
   margin: 0vw 15vw 5vw 15vw;
+  font-family: "Poppins", sans-serif;
 }
 .location .subheadtext .text-span {
   color: #de0303;
@@ -360,6 +364,7 @@ button:hover {
   position: relative;
   z-index: 5;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 .location .frame {
   width: 35vw;
@@ -396,6 +401,7 @@ button:hover {
   z-index: 3;
   text-align: center;
   margin: 0vw 15vw 5vw 15vw;
+  font-family: "Poppins", sans-serif;
   margin: 10vw 0vw 10vw 0vw;
 }
 .us .subheadtext .text-span {
@@ -502,12 +508,12 @@ button:hover {
 
 .footer {
   display: flex;
-  flex-direction: column;
   background-color: rgb(17, 17, 17);
-  padding: 20px;
   padding-top: 7vw;
   justify-content: space-evenly;
   align-items: start;
+  height: 32vh;
+  padding: 20px;
 }
 .footer .ft-section {
   display: flex;
@@ -530,7 +536,14 @@ button:hover {
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-  .footer {
+  .footer .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(17, 17, 17);
+    padding: 20px;
+    padding-top: 7vw;
+    justify-content: space-evenly;
+    align-items: start;
     padding-top: 10px;
     padding-bottom: 20px;
     justify-content: center;
